@@ -20,7 +20,16 @@ install_github('ramnathv/slidify')
 install_github('ramnathv/slidifyLibraries')
 
 library(slidify)
+
+dir.create('mydeck')
+setwd('mydeck')
+file.edit('index.Rmd')
+
+
+
+
 # publish(user = USER, repo = REPO) 
+setwd("~/Dropbox/R/10_Cursos/2020/2020 Developing Data Products/final_assignment/final_assignment/")
 publish('Presentation pitch', 
         filenames = c('Presentation_pitch.Rmd', 'Presentation_pitch.html'), 
         host = 'gist')

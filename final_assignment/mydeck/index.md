@@ -1,7 +1,6 @@
 ---
 title: "Presentation pitch"
 author: "icg"
-date: "August 25th, 2020"
 output: slidy_presentation
 mode: standalone
 ---
@@ -14,6 +13,18 @@ mode: standalone
 This [shiny app](https://icgbcn.shinyapps.io/Final_assignment/) is a basic data exploration tool. 
 
 It allows a visual inspection of the variables of a dataset, using univariate and bivariate plots. 
+
+
+```r
+data ("iris")
+
+ggplot(data = iris, 
+       aes(x = Sepal.Length, 
+             y = Sepal.Width, 
+             color = Species)) + 
+   geom_point() +
+   theme_minimal()
+```
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
 
@@ -35,6 +46,13 @@ The app contains a sidebar and 4 tabs:
 ## Iris data
 
 The app runs on the iris data, but it can be easily adapted to present any other data set. The ploting functions is ggplot2::qplot, which chooses the most adequate geom depending on the class of the selected variables: 
+
+
+```r
+as_tibble(iris) %>% 
+   kable(.)
+```
+
 
 
 | Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species    |

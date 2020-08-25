@@ -1,7 +1,6 @@
 ---
 title: "Presentation pitch"
 author: "icg"
-date: "August 25th, 2020"
 output: slidy_presentation
 mode: standalone
 ---
