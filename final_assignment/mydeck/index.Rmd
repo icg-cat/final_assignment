@@ -15,7 +15,7 @@ library(knitr)
 
 ## Introduction
 
-The shiny app is a basic data exploration tool. 
+This [shiny app](https://icgbcn.shinyapps.io/Final_assignment/) is a basic data exploration tool. 
 
 It allows a visual inspection of the variables of a dataset, using univariate and bivariate plots. 
 
