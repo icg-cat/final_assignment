@@ -6,8 +6,7 @@ data("demo shiny app - iris")
 
 ui <- fluidPage(
     
-    # Application title
-    titlePanel("Iris - bivariate plots"),
+    titlePanel("Iris - demo shiny app"),
     
     sidebarLayout(
         sidebarPanel(
@@ -24,11 +23,7 @@ ui <- fluidPage(
             
         ),
         
-        # Show a plot of the generated distribution
-        # mainPanel(
-        #    plotOutput("bivarPlot")
-        # )
-        
+
         mainPanel(
             tabsetPanel(
                 tabPanel("Instructions", 
