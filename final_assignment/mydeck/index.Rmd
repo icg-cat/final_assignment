@@ -1,0 +1,60 @@
+---
+title: "Presentation pitch"
+author: "icg"
+date: "8/25/2020"
+output: slidy_presentation
+mode: standalone
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(knitr)
+```
+
+
+## Introduction
+
+The shiny app is a basic data exploration tool. 
+
+It allows a visual inspection of the variables of a dataset, using univariate and bivariate plots. 
+
+```{r}
+data ("iris")
+
+ggplot(data = iris, 
+       aes(x = Sepal.Length, 
+             y = Sepal.Width, 
+             color = Species)) + 
+   geom_point() +
+   theme_minimal()
+
+```
+
+
+---
+ 
+## App contents
+ 
+The app contains a sidebar and 4 tabs:
+
+> - Sidebar: contains two widgets to select the variables
+> - Tab 1: Instructions to use the app
+> - Tab 2: univariate plots for selected variables
+> - Tab 3: bivariate plot for selected variables
+> - Tab 4: mean ratio between selected variables
+
+--- 
+
+## Iris data
+
+The app runs on the iris data, but it can be easily adapted to present any other data set. The ploting functions is ggplot2::qplot, which chooses the most adequate geom depending on the class of the selected variables: 
+
+```{r}
+as_tibble(iris) %>% 
+   kable(.)
+```
+
+##  
+
+Thank you!
